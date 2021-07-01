@@ -27,7 +27,7 @@ Boundary (shapefiles), should you choose to map any output can be found below:
 ## What we are looking for
 - Code organisation skills
 - Data wrangling and visualisation
-- Coding ability will be weighted more heavily that interpretation of results
+- Coding ability will be weighted more heavily than interpretation of results
 - You should spend no more than three hours on this task
 
 ## Instructions
