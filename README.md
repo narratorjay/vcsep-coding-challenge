@@ -37,7 +37,7 @@ than 12:00, 09.07.21
 ## FAQ
 1. *Who will own the code I write?*
 
-You will. The code you write you will reside on your own forked respository.
+You will. The code you write will reside on your own forked respository.
 You can choose to add a license to this code.
 
 2. *Why the IMD?*
