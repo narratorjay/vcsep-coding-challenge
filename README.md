@@ -42,7 +42,7 @@ You can choose to add a license to this code.
 
 2. *Why the IMD?*
 
-We use the IMD frequently alongside other data to inform out work. Being able
+We use the IMD frequently alongside other data to inform our work. Being able
 to analyse and understand the structure of the IMD is an important skill.
 
 3. *Do I have to use R or Python*
