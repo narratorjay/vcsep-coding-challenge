@@ -28,7 +28,7 @@ Shiny/Plotly web app, blog post, etc.
 (this could be a link to an external site if you posted the output as a blog post,
 for example)
 3. Submit a link to your forked repository to mattthomas@redcross.org.uk no later
-than 12:00, 09.07.21
+than 12:00, 12.07.2021
 
 ## What we are looking for
 - Code is well structured and follows best principles and patterns (e.g., DRY)
