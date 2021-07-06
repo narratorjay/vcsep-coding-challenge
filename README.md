@@ -1,5 +1,18 @@
 # VCSEP Coding Challenge
 
+## What happened?
+After viewing a map of deprivation levels across England supplied by the UK government's statistics department I came up with what I thought was a reasonable hypothesis:  does deprivation increase towards the two extremes of population density?
+
+Certainly desolate Dungeness and the crowded West Midlands are very different to visit, but they both have bluer shading on the map, indicating increasing deprivation.  This ties in with Tolstoy's observation at the beginning of Anna Karenina, “All happy families are alike; each unhappy family is unhappy in its own way."
+
+If it is true then it would lend support to the idea of specialising the response to deprived communities because their problems are very different.  People in one area may have limited public transport links to get to work and the other may suffer from poor air quality leading to increasing sickness.
+
+After thrashing my poor laptop to find matches between different spreadsheets overnight using R, I ran a quick n dirty analysis in Excel.  Hypothesis disproved.
+
+![image](https://user-images.githubusercontent.com/38632007/124572200-604f1200-de40-11eb-8871-86a8e080fd9a.png)
+
+
+
 ## The challenge
 Using R or Python, we would like you to run an analysis on the 2019 [English Indicies 
 of Multiple Deprivation (IMD)](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019)
