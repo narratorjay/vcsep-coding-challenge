@@ -1,6 +1,6 @@
 # VCSEP Coding Challenge
 
-## What happened?
+## Previous abandoned investigation overwhelmed by noise
 After viewing a map of deprivation levels across England supplied by the UK government's statistics department I came up with what I thought was a reasonable hypothesis:  does deprivation increase towards the two extremes of population density?
 
 Certainly desolate Dungeness and the crowded West Midlands are very different to visit, but they both have bluer shading on the map, indicating increasing deprivation.  This ties in with Tolstoy's observation at the beginning of Anna Karenina, “All happy families are alike; each unhappy family is unhappy in its own way."
