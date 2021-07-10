@@ -13,8 +13,10 @@ LA_Dep <- read.csv('Edited_Domains_of_Deprivation.csv')
 #[16] "Crime_decile"       "PoorAccess_rank"    "PoorAccess_decile" 
 #[19] "Environment_rank"   "Environment_decile"
 
-## only use deciles to compare Local Authority Deprivation
-for (EvenColumn in seq(4, 20, 2)){LA_Dep_Decile[EvenColumn/2 -1] <- LA_Dep[EvenColumn]}
+## only use deciles for barchart comparison, keep most even-numbered columns
+LA_Dep <- LA_Dep[, -c(2, seq(1, 19, 2))]
+
+
 
 
 
