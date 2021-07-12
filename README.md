@@ -11,13 +11,13 @@ After thrashing my poor laptop to find matches between different spreadsheets ov
 
 ![image](https://user-images.githubusercontent.com/38632007/124572200-604f1200-de40-11eb-8871-86a8e080fd9a.png)
 
-###
+##
 Well, that hasn't worked properly.  I could produce barcharts in R well enough 
 ![image](https://user-images.githubusercontent.com/38632007/125294981-ac0c2a80-e31c-11eb-94fc-77880dff31b2.png)
 
 ...but failed to make an interactive Shiny web page to compare the health deciles of LSOA in different local authorities.  My aim was to show two barcharts side-by-side, but I got snarled up in problems with the selectInput() section of the app.R file in Shiny.  Things that worked first time did not work later on, perhaps I polluted my R environment, but restarting did not clear things. 
 
-Uploading broken app.R code and I'll continue anyway, it has been a good opportunity learn the groundwork to display information interactively. 
+Uploading broken app.R code and I'll continue anyway, it has been a good opportunity learn the groundwork to display information interactively.  The insight I got is that there is more noise than bias, because although areas like Watford may be less deprived as a whole than Kingston-upon-Hull, the variation between the LSOAs in a local authority swamps the regional trend.  My conclusion is that there is always a requirement for charitable/ volunteer/ neighbourly help in any street in the country. 
  
 ## The challenge
 Using R or Python, we would like you to run an analysis on the 2019 [English Indicies 
