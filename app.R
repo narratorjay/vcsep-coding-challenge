@@ -1,14 +1,16 @@
-# Shiny task  # run setwd("C:\\Users\\Jay\\c3\\redcross"), plot.new()  if needed 
+# Shiny task   
 library(tidyverse)
-setwd("C:\\Users\\Jay\\c3\\redcross")
-LA_Dep <- read.csv('Edited_Domains_of_Deprivation.csv')
-LA_Dep <- LA_Dep[, -c(2, seq(1, 19, 2))]
-plot.new()
-
 library(ggplot2)
 library(shiny)
 library(rsconnect)
 library(dplyr)
+setwd("C:\\Users\\Jay\\c3\\redcross")   # plot.new()  if needed
+
+LA_Dep <- read.csv('Edited_Domains_of_Deprivation.csv')
+LA_Dep <- LA_Dep[, -c(2, seq(1, 19, 2))]
+plot.new()
+
+
 
 
 # later expansions:  
@@ -19,16 +21,15 @@ library(dplyr)
 
 
 ui <- fluidPage(
-  title("Compare the Health of Two English Local Authorities"),
-  sidebarLayout(
-    sidebarPanel(
-      selectInput(inputId = "First_LA_name", label = "First local authority",
-              choices = unique(LA_Dep$LA_name), selected = "Kingston upon Hull, City of"),
-      selectInput(inputId = "Second_LA_name", label = "Second local authority", 
-              choices = unique(LA_Dep$LA_name), selected = "Watford")
-    ),
+  titlePanel("Comparing English Local Authorities"),
+  flowLayout(
+    selectInput(inputId = "First_LA_name", label = "First local authority",
+            choices = unique(LA_Dep$LA_name), selected = "Kingston upon Hull, City of"),
+    selectInput(inputId = "Second_LA_name", label = "Second local authority", 
+            choices = unique(LA_Dep$LA_name), selected = "Watford"),
+  #),
   mainPanel()
-  )
+  ),
 ) 
 
 
