@@ -4,6 +4,7 @@
 library(tidyverse)
 library(ggplot2)
 library(shiny)
+library(shinydashboard)
 library(rsconnect)
 library(dplyr)
 setwd("C:\\Users\\Jay\\c3\\redcross")   # if needed
@@ -20,7 +21,8 @@ ui <- fluidPage(
             choices = LA_List, selected = "Kingston upon Hull, City of"),
     selectInput(inputId = "Second_LA_name", label = "Second local authority", 
             choices = LA_List, selected = "Watford"),
-    ),
+    helpText("Expecting local authorities across England to display similar distributions of education, health, crime etc, even when ordered by rank rather than scalar values?  Most histograms display similar patterns that fit with my experience of living in Ealing, Manchester, Liverpool, Balham and Winchester over the past four decades.  Many areas (LSOAs) in any local authority are struggling in one way or another, but overall it balances out.  Then I saw the health deciles for Blackpool and could not argue with the RSS feed from RT broadcast on 15th July 2021, \'The UK is the most unequal society in the developed world.\' "),
+        ),
   mainPanel(plotOutput("First_Plot"),
             plotOutput("Second_Plot")
             )
