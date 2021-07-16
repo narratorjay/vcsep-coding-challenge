@@ -1,0 +1,14 @@
+name: redcross
+title: redcross
+username:
+account: narratorjay
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4390460
+bundleId: 4826455
+url: https://narratorjay.shinyapps.io/redcross/
+when: 1626447016.01967
+lastSyncTime: 1626447016.01967
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: CopyForDescription.txt
