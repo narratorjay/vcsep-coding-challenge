@@ -10,7 +10,7 @@ library(dplyr)
 
 
 LA_Dep <- read.csv('Edited_Domains_of_Deprivation.csv')
-LA_Dep <- LA_Dep[, -c(2, seq(1, 19, 2))]  # remove columns, I am using deciles not ranked positions
+LA_Dep <- LA_Dep[, -c(2, seq(1, 19, 2))]  # remove half the columns, I am using deciles not ranked positions
 LA_List <- unique(LA_Dep$LA_name)
 
 ui <- fluidPage(
@@ -30,21 +30,26 @@ ui <- fluidPage(
 )
 
 server <- function(input, output) {
-  # extract max and min decile values here to pass to scale_x_continuous(breaks = seq(EitherMin, EitherMax, 1))
+  # prepare to print correct range of integers for decile values
+  Filtered_Dep <- filter(LA_Dep, LA_name %in% c(First_LA_name, Second_LA_name))
+  Min_Decile <- min(Filtered_Dep$Health_decile)
+  Max_Decile <- max(Filtered_Dep$Health_decile)
+
   output$First_Plot <- renderPlot({
-    ggplot(LA_Dep, aes(x = Health_decile)) +
+    #ggplot(LA_Dep, aes(x = Health_decile)) +
+    ggplot(Filtered_Dep, aes(x = Health_decile)) +
     geom_histogram(bins = 10, colour = "#CC0000", fill = "#EE000060",
                    data = LA_Dep[LA_Dep$LA_name %in% input$First_LA_name,]) +
       geom_histogram(bins = 10, colour = "#00CC00", fill = "#00EE0060",
                      data = LA_Dep[LA_Dep$LA_name %in% input$Second_LA_name,]) +
-    scale_x_continuous(breaks=seq(1,10,1)) +
+    scale_x_continuous(breaks = seq(Min_Decile, Max_Decile , 1)) +
     coord_flip() +
     labs(title = paste("Comparing health of population in", input$First_LA_name, "(red) with", input$Second_LA_name, "(green)"),
       x = "Decile rank in England  (higher is better)",
-      y = "LSOA (small district) count with that rank" ) +
+      y = "LSOA (small district) count" ) +
     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
       panel.background = element_rect(fill = 'white', colour = 'white'),
-      axis.line = element_line(colour = "#5A5A7A"))
+      axis.line = element_line(colour = "#5A5A9A"))
   })
 }
 
