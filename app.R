@@ -30,12 +30,14 @@ ui <- fluidPage(
 )
 
 server <- function(input, output) {
+  # extract max and min decile values here to pass to scale_x_continuous(breaks = seq(EitherMin, EitherMax, 1))
   output$First_Plot <- renderPlot({
     ggplot(LA_Dep, aes(x = Health_decile)) +
     geom_histogram(bins = 10, colour = "#CC0000", fill = "#EE000060",
                    data = LA_Dep[LA_Dep$LA_name %in% input$First_LA_name,]) +
       geom_histogram(bins = 10, colour = "#00CC00", fill = "#00EE0060",
                      data = LA_Dep[LA_Dep$LA_name %in% input$Second_LA_name,]) +
+    scale_x_continuous(breaks=seq(1,10,1)) +
     coord_flip() +
     labs(title = paste("Comparing health of population in", input$First_LA_name, "(red) with", input$Second_LA_name, "(green)"),
       x = "Decile rank in England  (higher is better)",
