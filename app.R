@@ -9,9 +9,13 @@ library(rsconnect)
 library(dplyr)
 
 
+
 LA_Dep <- read.csv('Edited_Domains_of_Deprivation.csv')
 LA_Dep <- LA_Dep[, -c(2, seq(1, 19, 2))]  # remove columns, I am using deciles not ranked positions
 LA_List <- unique(LA_Dep$LA_name)
+#R_Dict_Key <- c("Index of Multiple Deprivation", "Income", "Employment")
+#colnames(LA_Dep[2:4])
+#then use same index value in both to transfer from Shiny selection to dataframe column
 
 ui <- fluidPage(
   titlePanel("Comparing deprivation scores between English local authorities"),
