@@ -1,7 +1,5 @@
-# From an application task from an interview  
+# @narratorjay, July 2021
 
-
-library(tidyverse)
 library(ggplot2)
 library(shiny)
 library(shinydashboard)
@@ -10,7 +8,7 @@ library(dplyr)
 
 # setwd(...) in console when working locally
 LA_Dep <- read.csv('Edited_Domains_of_Deprivation.csv')
-LA_Dep <- LA_Dep[, -c(2, seq(1, 19, 2))]  # remove unnecessary columns, I am using deciles not ranked positions
+LA_Dep <- LA_Dep[, -c(2, seq(1, 19, 2))]  # retain name and decile columns
 LA_List <- unique(LA_Dep$LA_name)
 Dep_List <- colnames(LA_Dep)
 Dep_List <- Dep_List[-1]    # first column is LA (Local Authority) name
@@ -35,13 +33,14 @@ ui <- fluidPage(
 )
 
 server <- function(input, output) {
+  plot.new()
   output$First_Plot <- renderPlot({
 
     LA_Dep_Compare <- filter(LA_Dep, LA_name %in% c(input$First_LA_name, input$Second_LA_name))
     rownames(LA_Dep_Compare)<-1:nrow(LA_Dep_Compare)
     LA_Dep_Compare <- data.frame(LA_Dep_Compare)
     
-    Min_Decile <- min(LA_Dep_Compare[,2])   # finessing bin numbers along the eventual y-axis
+    Min_Decile <- min(LA_Dep_Compare[,2])   # finess bin numbering
     Max_Decile <- max(LA_Dep_Compare[,2])        
     nBins <- 1 + Max_Decile - Min_Decile
 
