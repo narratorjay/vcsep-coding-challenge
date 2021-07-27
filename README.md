@@ -1,23 +1,20 @@
 ﻿# VCSEP Coding Challenge
 
-## Previous abandoned investigation overwhelmed by noise
-After viewing a map of deprivation levels across England supplied by the UK government's statistics department I came up with what I thought was a reasonable hypothesis:  does deprivation increase towards the two extremes of population density?
+## Previous abandoned investigation
+After viewing a map of deprivation levels across England supplied by a UK government website I came up with what I thought was a reasonable hypothesis:  does deprivation increase towards the two extremes of population density?  Certainly desolate Dungeness and the crowded West Midlands are very different to visit, but they both had shading on the map that indicated increasing deprivation.  This ties in with Tolstoy's observation at the beginning of Anna Karenina, “All happy families are alike; each unhappy family is unhappy in its own way."
 
-Certainly desolate Dungeness and the crowded West Midlands are very different to visit, but they both have bluer shading on the map, indicating increasing deprivation.  This ties in with Tolstoy's observation at the beginning of Anna Karenina, “All happy families are alike; each unhappy family is unhappy in its own way."
-
-If it is true then it would lend support to the idea of specialising the response to deprived communities because their problems are very different.  People in one area may have limited public transport links to get to work and the other may suffer from poor air quality leading to increasing sickness.
-
-After thrashing my poor laptop to find matches between different spreadsheets overnight using R, I ran a quick n dirty analysis in Excel.  Hypothesis disproved.
+If it is true then it would lend support to the idea of specialising the response to deprived communities because their problems are very different.  People in one area may have limited public transport links to get to work and the other may suffer from poor air quality leading to increasing sickness.  So I ran a quick n dirty analysis in Excel.  Hypothesis disproved.
 
 ![image](https://user-images.githubusercontent.com/38632007/124572200-604f1200-de40-11eb-8871-86a8e080fd9a.png)
 
-
 ## Demonstration Shiny webpage  https://narratorjay.shinyapps.io/redcross/
-Visit and compare different deprivation domains (income, access to services, health etc) between any two of England's 450 local authorities.
+Select any two of England's 450 local authorities and compare their deprivation levels across different domains such as income, access to services, health etc.
 
-My insight is that there is more noise than bias, because although areas like Watford may be less deprived as a whole than Kingston-upon-Hull, the variation between the LSOAs in a local authority swamps the regional trend.  My conclusion is that there is always a requirement for charitable/ volunteer/ neighbourly help in any street in the country. 
+My insight is that there is more often noise than bias, because although areas like Watford may be less deprived as a whole than Kingston-upon-Hull, the variation between the LSOAs in a local authority usually swamps the regional trend.  My conclusion is that there is always a requirement for charitable/ volunteer/ neighbourly help in any street in the country. 
 
-# The remaining sections describe the coding challenge
+
+
+# The remaining sections describe the coding challenge set by VCSEP
 (I was a week late but determined to learn Shiny)
  
 ## The challenge
